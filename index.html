@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shlomo Schnall – Concert Pianist</title>
+  <meta name="description"
+    content="Shlomo Schnall – Professional Concert Pianist. Explore performances, repertoire, and videos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <div class="piano-keys-mini" aria-hidden="true">
+        <span class="pk w"></span><span class="pk b"></span>
+        <span class="pk w"></span><span class="pk b"></span>
+        <span class="pk w"></span><span class="pk w"></span>
+        <span class="pk b"></span><span class="pk w"></span>
+      </div>
+      <span class="brand-name">Shlomo Schnall</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#performances" class="nav-link">Performances</a></li>
+      <li><a href="#repertoire" class="nav-link">Repertoire</a></li>
+      <li><a href="#videos" class="nav-link">Videos</a></li>
+      <li><a href="#reviews" class="nav-link">Press</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher" id="themeSwitcher" aria-label="Choose color theme">
+      <button class="theme-btn active" data-theme="midnight" title="Midnight"
+        style="background:linear-gradient(135deg,#0a0a1a,#1e3a5f)"></button>
+      <button class="theme-btn" data-theme="ivory" title="Classic Ivory"
+        style="background:linear-gradient(135deg,#f5f0e8,#c9a84c)"></button>
+      <button class="theme-btn" data-theme="jazz" title="Jazz Amber"
+        style="background:linear-gradient(135deg,#1a0d00,#c07a2a)"></button>
+      <button class="theme-btn" data-theme="crimson" title="Crimson"
+        style="background:linear-gradient(135deg,#1a0008,#8b1a2e)"></button>
+      <button class="theme-btn" data-theme="emerald" title="Emerald"
+        style="background:linear-gradient(135deg,#001a0d,#1a6b3c)"></button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <img src="images/hero.png" alt="Shlomo Schnall performing" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="floating-notes" id="floatingNotes" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Concert Pianist</p>
+      <h1 class="hero-title">
+        <span class="hero-name" id="typedName"></span>
+      </h1>
+      <p class="hero-subtitle">Bringing classical mastery to life — one note at a time.</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn btn-primary">Discover More</a>
+        <a href="#contact" class="btn btn-outline">Book a Performance</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-dot"></span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ ABOUT ══════════════════════════════ -->
+  <section id="about" class="section reveal">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-portrait reveal-left">
+          <div class="portrait-frame">
+            <img src="images/about.png" alt="Portrait of Shlomo Schnall" />
+            <div class="portrait-accent"></div>
+          </div>
+          <div class="about-signature">Shlomo Schnall</div>
+        </div>
+        <div class="about-text reveal-right">
+          <p class="section-eyebrow">About the Pianist</p>
+          <h2 class="section-heading">A Voice Through the Keys</h2>
+          <p class="about-bio">
+            Shlomo Schnall is a classically trained concert pianist celebrated for his expressive
+            interpretations of the Romantic and Classical repertoire. With a career spanning
+            international concert halls, recording studios, and intimate recital venues, Shlomo
+            brings technical brilliance and deep musical sensitivity to every performance.
+          </p>
+          <p class="about-bio">
+            A graduate of the world-renowned conservatory program, Shlomo has performed alongside
+            leading orchestras and collaborated with distinguished conductors and soloists across
+            the globe. His playing is marked by an extraordinary depth of musicality, poetic phrasing,
+            and an innate connection to the emotional heart of every score.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Years Performing</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="300">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Concerts Worldwide</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="15">0</span><span class="stat-suffix"></span>
+              <span class="stat-label">Albums Released</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════ PERFORMANCES ════════════════════════════ -->
+  <section id="performances" class="section section-alt reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow text-center">Gallery</p>
+      <h2 class="section-heading text-center">On Stage</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" data-delay="0">
+          <img src="images/performance1.png" alt="Live orchestral performance" loading="lazy" />
+          <div class="gallery-overlay"><span>Orchestral Concert</span></div>
+        </div>
+        <div class="gallery-item reveal" data-delay="100">
+          <img src="images/performance2.png" alt="Recital hall performance" loading="lazy" />
+          <div class="gallery-overlay"><span>Evening Recital</span></div>
+        </div>
+        <div class="gallery-item reveal" data-delay="200">
+          <img src="images/performance3.png" alt="Pianist hands on keys" loading="lazy" />
+          <div class="gallery-overlay"><span>At the Piano</span></div>
+        </div>
+      </div>
+      <p class="gallery-note">📷 Replace images in the <code>images/</code> folder anytime to update the gallery.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ REPERTOIRE ═════════════════════════════ -->
+  <section id="repertoire" class="section reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow text-center">Repertoire</p>
+      <h2 class="section-heading text-center">Musical Worlds</h2>
+      <div class="repertoire-grid">
+        <div class="rep-card reveal" data-delay="0">
+          <div class="rep-icon">🎼</div>
+          <h3>Frédéric Chopin</h3>
+          <p>Nocturnes, Ballades, Études, Scherzi, Piano Sonatas</p>
+        </div>
+        <div class="rep-card reveal" data-delay="100">
+          <div class="rep-icon">🎹</div>
+          <h3>Ludwig van Beethoven</h3>
+          <p>Piano Sonatas Op. 111, Op. 57, Concertos No. 4 &amp; 5</p>
+        </div>
+        <div class="rep-card reveal" data-delay="200">
+          <div class="rep-icon">🎵</div>
+          <h3>Claude Debussy</h3>
+          <p>Préludes, Images, Estampes, Clair de lune</p>
+        </div>
+        <div class="rep-card reveal" data-delay="300">
+          <div class="rep-icon">🎶</div>
+          <h3>Franz Schubert</h3>
+          <p>Impromptus, Sonatas, Wanderer Fantasy</p>
+        </div>
+        <div class="rep-card reveal" data-delay="400">
+          <div class="rep-icon">🎸</div>
+          <h3>Sergei Rachmaninoff</h3>
+          <p>Piano Concertos, Études-Tableaux, Preludes</p>
+        </div>
+        <div class="rep-card reveal" data-delay="500">
+          <div class="rep-icon">🎷</div>
+          <h3>Johann Sebastian Bach</h3>
+          <p>Goldberg Variations, Well-Tempered Clavier, Partitas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ YOUTUBE VIDEOS ═════════════════════════ -->
+  <section id="videos" class="section section-alt reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow text-center">Watch</p>
+      <h2 class="section-heading text-center">Performances on Video</h2>
+      <p class="videos-note">
+        Add or remove videos anytime by editing <code>videos.json</code> in the project folder.
+      </p>
+      <div class="videos-grid" id="videosGrid">
+        <div class="videos-loading">Loading videos…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ REVIEWS ══════════════════════════════ -->
+  <section id="reviews" class="section reveal">
+    <div class="section-inner">
+      <p class="section-eyebrow text-center">Press</p>
+      <h2 class="section-heading text-center">What They're Saying</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-slide">
+            <blockquote>
+              "Schnall's Chopin was nothing short of revelatory — each phrase shaped with
+              extraordinary sensitivity and unmistakable artistry."
+            </blockquote>
+            <cite>— The Classical Review</cite>
+          </div>
+          <div class="testimonial-slide">
+            <blockquote>
+              "A pianist of rare depth. His Beethoven sonatas spoke with the authority of
+              a seasoned master and the freshness of genuine discovery."
+            </blockquote>
+            <cite>— International Piano Magazine</cite>
+          </div>
+          <div class="testimonial-slide">
+            <blockquote>
+              "Technically flawless and emotionally captivating — the audience was
+              spellbound from the first note to the last."
+            </blockquote>
+            <cite>— Vienna Concert Hall Programme</cite>
+          </div>
+          <div class="testimonial-slide">
+            <blockquote>
+              "Shlomo Schnall possesses that rare gift — the ability to make the piano
+              sing with a voice entirely his own."
+            </blockquote>
+            <cite>— Carnegie Hall Review</cite>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="tc-btn" id="tcPrev" aria-label="Previous">&#8592;</button>
+          <div class="tc-dots" id="tcDots"></div>
+          <button class="tc-btn" id="tcNext" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ CONTACT ════════════════════════════ -->
+  <section id="contact" class="section section-alt reveal">
+    <div class="section-inner contact-inner">
+      <div class="contact-text reveal-left">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h2 class="section-heading">Book a Performance</h2>
+        <p>Whether you're looking for a solo recital, orchestral collaboration, or private event,
+          Shlomo would love to hear from you.</p>
+        <div class="contact-socials">
+          <a href="#" class="social-link" aria-label="YouTube">▶ YouTube</a>
+          <a href="#" class="social-link" aria-label="Facebook">f Facebook</a>
+          <a href="#" class="social-link" aria-label="Instagram">✦ Instagram</a>
+        </div>
+      </div>
+      <div class="contact-details reveal-right"
+        style="background: var(--bg-primary); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: center; text-align: center;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--accent); margin-bottom: 1rem;">
+          Direct Contact</h3>
+        <p style="font-size: 1.25rem; font-weight: 500;">
+          <a href="mailto:info@shlomoschnall.com"
+            style="color: var(--text-primary); text-decoration: underline; text-decoration-color: var(--accent);">info@shlomoschnall.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-keys" aria-hidden="true" id="footerKeys"></div>
+    <p class="footer-copy">© 2025 Shlomo Schnall – Concert Pianist. All rights reserved.</p>
+  </footer>
+
+  <!-- ══════════════════ FLOATING INFO PANEL ════════════════════════════ -->
+  <button class="fab" id="fabBtn" aria-label="Pianist Info" title="About Shlomo Schnall">
+    <span class="fab-icon">🎹</span>
+  </button>
+
+  <div class="info-panel" id="infoPanel" role="dialog" aria-modal="true" aria-label="Pianist Quick Info">
+    <div class="info-panel-header">
+      <h3>Shlomo Schnall</h3>
+      <button class="info-close" id="infoClose" aria-label="Close">✕</button>
+    </div>
+    <div class="info-panel-body">
+      <div class="info-photo">
+        <img src="images/about.png" alt="Shlomo Schnall" />
+      </div>
+      <ul class="info-list">
+        <li><span class="info-icon">🎓</span><strong>Education:</strong> International Conservatory, Master of Music
+        </li>
+        <li><span class="info-icon">🌍</span><strong>Based:</strong> New York, NY</li>
+        <li><span class="info-icon">🎭</span><strong>Speciality:</strong> Romantic &amp; Classical Repertoire</li>
+        <li><span class="info-icon">🏆</span><strong>Awards:</strong> International Piano Competition Laureate</li>
+        <li><span class="info-icon">💿</span><strong>Recordings:</strong> 15+ Studio &amp; Live Albums</li>
+        <li><span class="info-icon">📧</span><strong>Booking:</strong> <a
+            href="mailto:info@shlomoschnall.com">info@shlomoschnall.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="info-overlay" id="infoOverlay"></div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">✕</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
