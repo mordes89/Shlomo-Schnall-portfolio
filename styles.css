@@ -237,8 +237,6 @@ a:hover { color: var(--accent-hover); }
 }
 .hero-eyebrow { font-family: var(--font-script); font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem; }
 .hero-title { font-size: 4rem; margin-bottom: 1rem; color: #fff; }
-.hero-name::after { content: '|'; animation: blink 1s infinite; }
-@keyframes blink { 50% { opacity: 0; } }
 .hero-subtitle { font-size: 1.25rem; color: #ccc; margin-bottom: 2rem; }
 .hero-cta { display: flex; gap: 1rem; justify-content: center; }
 
