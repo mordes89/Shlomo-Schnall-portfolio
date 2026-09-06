@@ -327,6 +327,10 @@ a:hover { color: var(--accent-hover); }
 /* Contact Form */
 .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 .contact-socials { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.contact-whatsapp-row { margin-top: 1rem; }
+.whatsapp-contact { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 500; white-space: nowrap; }
+.whatsapp-icon { width: 1.4rem; height: 1.4rem; flex-shrink: 0; color: #25d366; }
+.whatsapp-contact:hover span { text-decoration: underline; }
 .social-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 500; font-size: 1.1rem; }
 .contact-form { background: var(--bg-primary); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
 .form-group { margin-bottom: 1.5rem; }
