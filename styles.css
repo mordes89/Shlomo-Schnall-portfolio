@@ -3,6 +3,11 @@
   Uses CSS variables for theming.
 */
 
+html { overflow-x: clip; }
+@media (max-width: 768px) {
+  .reveal-left:not(.active), .reveal-right:not(.active) { transform: translateY(24px); }
+}
+
 :root {
   /* Default Theme: Midnight */
   --bg-primary: #0a0a1a;
@@ -153,6 +158,17 @@ a:hover { color: var(--accent-hover); }
   z-index: 1000;
   border-bottom: 1px solid var(--border-color);
 }
+.language-toggle { flex-shrink: 0; padding: .45rem .75rem; border: 1px solid var(--accent); border-radius: 5px; background: var(--bg-primary); color: var(--text-primary); font: inherit; font-size: .9rem; cursor: pointer; }
+.language-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+#navbar { gap: 1rem; }
+html[lang="he"] { --font-heading: Arial, sans-serif; --font-body: Arial, sans-serif; --font-script: 'Gveret Levin', cursive; }
+html[dir="rtl"] .lesson-kicker, html[dir="rtl"] .nav-link { letter-spacing: normal; }
+html[dir="rtl"] .lessons-welcome { border-left: 0; border-right: 3px solid var(--accent); }
+html[dir="rtl"] .video-card { text-align: left; }
+a[href^="mailto:"], .whatsapp-contact, #shareUrl { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] .about-signature { right: auto; left: .5rem; transform: rotate(5deg); font-family: 'Gveret Levin', cursive; font-weight: 400; }
+@media (min-width: 769px) and (max-width: 1150px) { #navbar { padding-inline: 1rem; gap: .75rem; } .nav-links { gap: .8rem; } .theme-switcher { display: none; } }
+@media (max-width: 768px) { #navbar { padding-inline: .75rem; gap: .5rem; } .nav-brand { font-size: 1.1rem; } .grand-piano-icon { width: 28px; } .language-toggle { font-size: .8rem; padding: .4rem .6rem; } }
 .nav-brand {
   display: flex;
   align-items: center;
@@ -429,7 +445,8 @@ a:hover { color: var(--accent-hover); }
     flex-direction: column; padding: 2rem; gap: 1rem; border-bottom: 1px solid var(--border-color);
     transform: translateY(-100%); opacity: 0; transition: all 0.3s; pointer-events: none; z-index: -1;
   }
-  .nav-links.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav-links { visibility: hidden; }
+  .nav-links.active { transform: translateY(0); opacity: 1; pointer-events: auto; visibility: visible; }
   .nav-toggle { display: block; }
   
   .hero-title { font-size: 2.5rem; }

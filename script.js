@@ -42,20 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Typewriter Effect
-  const typedName = document.getElementById('typedName');
-  const nameText = "Shlomo Schnall";
-  if (typedName) {
-    let i = 0;
-    function typeWriter() {
-      if (i < nameText.length) {
-        typedName.innerHTML += nameText.charAt(i);
-        i++;
-        setTimeout(typeWriter, 150);
-      }
-    }
-    setTimeout(typeWriter, 500);
-  }
 
   // Floating Notes
   const floatingNotes = document.getElementById('floatingNotes');
@@ -114,14 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const shareWebsite = document.getElementById('shareWebsite');
   if (shareWebsite) {
     shareWebsite.addEventListener('click', async () => {
-      const url = 'https://mordes89.github.io/Shlomo-Schnall-portfolio/';
+      const url = `https://mordes89.github.io/Shlomo-Schnall-portfolio/?lang=${document.documentElement.lang === 'he' ? 'he' : 'en'}`;
       const status = document.getElementById('shareStatus');
       const fallback = document.getElementById('shareUrl');
       status.textContent = '';
       fallback.hidden = true;
       try {
         if (navigator.share) {
-          await navigator.share({ title: 'Shlomo Schnall — Concert Pianist', url });
+          await navigator.share({ title: document.title, url });
           return;
         }
       } catch (error) {
