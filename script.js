@@ -113,28 +113,67 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
-    fetch('videos.json')
+    fetch('videos.json?v=20260907')
       .then(res => res.json())
       .then(data => {
         videosGrid.innerHTML = '';
         if (data && data.length > 0) {
-          data.forEach(video => {
-            // Extract youtube ID
-            const urlObj = new URL(video.url);
-            let videoId = urlObj.searchParams.get('v');
-            if (!videoId) videoId = video.url.split('youtu.be/')[1]; // Fallback for shortened URL
-            if (videoId) {
-              const card = document.createElement('div');
-              card.className = 'video-card reveal';
-              card.innerHTML = `
-                <div class="video-wrapper">
-                  <iframe src="https://www.youtube.com/embed/${videoId}?rel=0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-                <div class="video-title">${video.title}</div>
-              `;
-              videosGrid.appendChild(card);
-              observer.observe(card); // observe for reveal animation
-            }
+          const groups = [
+            { category: 'recital', title: 'Full Recitals', intro: 'Longer programs featuring a selection of classical works and more.' },
+            { category: 'single', title: 'Individual Performances', intro: 'Single pieces, Jewish jazz and vocal collaborations.' }
+          ];
+          groups.forEach(group => {
+            const videos = data.filter(video => video.category === group.category);
+            if (!videos.length) return;
+            const section = document.createElement('section');
+            section.className = 'video-group';
+            section.setAttribute('aria-labelledby', `videos-${group.category}`);
+            const heading = document.createElement('h3');
+            heading.id = `videos-${group.category}`;
+            heading.textContent = group.title;
+            const intro = document.createElement('p');
+            intro.className = 'video-group-intro';
+            intro.textContent = group.intro;
+            const grid = document.createElement('div');
+            grid.className = 'videos-grid';
+            videos.forEach(video => {
+              const videoId = new URL(video.url).searchParams.get('v');
+              if (!/^[\w-]{11}$/.test(videoId || '')) return;
+              const card = document.createElement('article');
+              card.className = 'video-card';
+              const wrapper = document.createElement('div');
+              wrapper.className = 'video-wrapper';
+              const iframe = document.createElement('iframe');
+              const start = Number.isInteger(video.start) && video.start > 0 ? `&start=${video.start}` : '';
+              iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0${start}`;
+              iframe.title = `${video.title} — Shlomo Schnall`;
+              iframe.loading = 'lazy';
+              iframe.allowFullscreen = true;
+              iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+              wrapper.appendChild(iframe);
+              const details = document.createElement('div');
+              details.className = 'video-details';
+              const title = document.createElement('h4');
+              title.className = 'video-title';
+              title.textContent = video.title;
+              const duration = document.createElement('p');
+              duration.className = 'video-duration';
+              duration.textContent = `Duration: ${video.duration}`;
+              const description = document.createElement('p');
+              description.className = 'video-description';
+              description.textContent = video.description;
+              const link = document.createElement('a');
+              link.className = 'video-source';
+              link.href = video.url;
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+              link.textContent = 'Watch on YouTube ↗';
+              details.append(title, duration, description, link);
+              card.append(wrapper, details);
+              grid.appendChild(card);
+            });
+            section.append(heading, intro, grid);
+            videosGrid.appendChild(section);
           });
         } else {
           videosGrid.innerHTML = '<p class="videos-note">Check back later for new performance videos.</p>';

@@ -1,14 +1,73 @@
 [
   {
+    "url": "https://www.youtube.com/watch?v=RLsiW1ojpDQ&t=300s",
+    "title": "Piano Recital — Mozart, Chopin, Brahms, Debussy & Ravel",
+    "category": "recital",
+    "duration": "58:10",
+    "description": "A classical piano program featuring works by Mozart, Chopin, Brahms, Debussy and Ravel. Playback begins at 5:00.",
+    "start": 300
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WzpzMVaTiKc",
+    "title": "Piano Recital — Classical Works & Jewish Jazz",
+    "category": "recital",
+    "duration": "52:26",
+    "description": "Shlomo performs music by Mozart, Chopin, Brahms and Debussy, alongside his own jazz-inspired interpretation of Jewish music."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=bZzKPXbCdBY",
+    "title": "Chanukah Piano Recital",
+    "category": "recital",
+    "duration": "1:01:40",
+    "description": "A Chanukah recital featuring Shlomo at the piano in works by Mozart, Chopin and Brahms."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xUGivyhAMkA",
+    "title": "Mozart, Chopin, Debussy, Liszt & Rachmaninoff",
+    "category": "recital",
+    "duration": "45:32",
+    "description": "A recorded recital featuring Mozart’s Sonata K. 330 (first movement), Chopin’s Nocturne Op. 55 No. 2 and Fantaisie in F minor, Debussy’s Reflets dans l’eau, Liszt’s Funérailles, and Rachmaninoff’s Prelude Op. 32 No. 12."
+  },
+  {
     "url": "https://www.youtube.com/watch?v=b-wnUP_c99U",
-    "title": "Shlomo Schnall – Pirates of the Mediterranean"
+    "title": "Pirates of the Mediterranean",
+    "category": "single",
+    "duration": "2:58",
+    "description": "Shlomo Schnall performs Pirates of the Mediterranean live, in a recording shared by Mike Schnall."
   },
   {
     "url": "https://www.youtube.com/watch?v=E7lL51jFaMk",
-    "title": "Shlomo Schnall – F. Chopin: Valse Brillante"
+    "title": "F. Chopin: Valse Brillante",
+    "category": "single",
+    "duration": "5:18",
+    "description": "A live performance of Chopin’s Valse Brillante by Shlomo Schnall, shared by Mike Schnall."
   },
   {
     "url": "https://www.youtube.com/watch?v=EEled2T-ZBo",
-    "title": "Shlomo Schnall – Two Flights Down"
+    "title": "Two Flights Down",
+    "category": "single",
+    "duration": "2:37",
+    "description": "Shlomo Schnall performs Two Flights Down live, in a recording shared by Mike Schnall."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=pfsVDmC6RCs",
+    "title": "Jewish Jazz — Torat Hashem",
+    "category": "single",
+    "duration": "2:15",
+    "description": "Shlomo brings a jazz interpretation to the Jewish classic Torat Hashem in this short piano performance."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ijUzUFZ-5nQ",
+    "title": "Chopin: Barcarolle, Op. 60",
+    "category": "single",
+    "duration": "9:35",
+    "description": "Shlomo performs Chopin’s Barcarolle, Op. 60 at a GEMS concert, shared by Naftali Schindler."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=SjGFq3izXY8",
+    "title": "Rachem (Mercy) — Avraham Feintuch & Shlomo Schnall",
+    "category": "single",
+    "duration": "4:46",
+    "description": "Cantor Avraham Feintuch sings Rachem, in the tradition of Cantor Rosenblatt, with Shlomo Schnall accompanying on piano."
   }
 ]
