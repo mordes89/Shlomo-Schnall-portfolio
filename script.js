@@ -110,6 +110,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutSection = document.getElementById('about');
   if (aboutSection) observer.observe(aboutSection);
 
+  // Share the public website, including when previewing locally.
+  const shareWebsite = document.getElementById('shareWebsite');
+  if (shareWebsite) {
+    shareWebsite.addEventListener('click', async () => {
+      const url = 'https://mordes89.github.io/Shlomo-Schnall-portfolio/';
+      const status = document.getElementById('shareStatus');
+      const fallback = document.getElementById('shareUrl');
+      status.textContent = '';
+      fallback.hidden = true;
+      try {
+        if (navigator.share) {
+          await navigator.share({ title: 'Shlomo Schnall — Concert Pianist', url });
+          return;
+        }
+      } catch (error) {
+        if (error.name === 'AbortError') return;
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        status.textContent = 'Website link copied — ready to share.';
+      } catch {
+        fallback.value = url;
+        fallback.hidden = false;
+        fallback.focus();
+        fallback.select();
+        status.textContent = 'Copy this link to share the website.';
+      }
+    });
+  }
+
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
@@ -119,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
         videosGrid.innerHTML = '';
         if (data && data.length > 0) {
           const groups = [
-            { category: 'recital', title: 'Full Recitals', intro: 'Longer programs featuring a selection of classical works and more.' },
-            { category: 'single', title: 'Individual Performances', intro: 'Single pieces, Jewish jazz and vocal collaborations.' }
+            { category: 'single', title: 'Individual Performances', intro: 'Single pieces, Jewish jazz and vocal collaborations.' },
+            { category: 'recital', title: 'Full Recitals', intro: 'Longer programs featuring a selection of classical works and more.' }
           ];
           groups.forEach(group => {
             const videos = data.filter(video => video.category === group.category);
