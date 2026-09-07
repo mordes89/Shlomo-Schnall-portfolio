@@ -20,12 +20,11 @@
   <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
   <nav id="navbar">
     <div class="nav-brand">
-      <div class="piano-keys-mini" aria-hidden="true">
-        <span class="pk w"></span><span class="pk b"></span>
-        <span class="pk w"></span><span class="pk b"></span>
-        <span class="pk w"></span><span class="pk w"></span>
-        <span class="pk b"></span><span class="pk w"></span>
-      </div>
+      <svg class="grand-piano-icon" viewBox="0 0 64 56" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M7 28h48v9H7zM12 37h4v16h-4zM46 37h4v16h-4zM10 25V9c12-8 31-8 42-3 7 3 7 11 1 14l-9 5H10Z"/>
+        <path d="M10 25 53 6M47 25V13" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M11 30v5m5-5v5m5-5v5m5-5v5m5-5v5m5-5v5m5-5v5m5-5v5m5-5v5" stroke="var(--bg-primary)" stroke-width="2"/>
+      </svg>
       <span class="brand-name">Shlomo Schnall</span>
     </div>
 
@@ -36,7 +35,6 @@
       <li><a href="#performances" class="nav-link">Performances</a></li>
       <li><a href="#repertoire" class="nav-link">Repertoire</a></li>
       <li><a href="#videos" class="nav-link">Videos</a></li>
-      <li><a href="#reviews" class="nav-link">Press</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 
@@ -106,16 +104,12 @@
           </p>
           <div class="about-stats">
             <div class="stat-item">
-              <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+              <span class="stat-number" data-target="37">0</span><span class="stat-suffix">+</span>
               <span class="stat-label">Years Performing</span>
             </div>
             <div class="stat-item">
               <span class="stat-number" data-target="300">0</span><span class="stat-suffix">+</span>
               <span class="stat-label">Concerts Worldwide</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="15">0</span><span class="stat-suffix"></span>
-              <span class="stat-label">Albums Released</span>
             </div>
           </div>
         </div>
@@ -200,51 +194,6 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════ REVIEWS ══════════════════════════════ -->
-  <section id="reviews" class="section reveal">
-    <div class="section-inner">
-      <p class="section-eyebrow text-center">Press</p>
-      <h2 class="section-heading text-center">What They're Saying</h2>
-      <div class="testimonial-carousel">
-        <div class="testimonial-track" id="testimonialTrack">
-          <div class="testimonial-slide">
-            <blockquote>
-              "Schnall's Chopin was nothing short of revelatory — each phrase shaped with
-              extraordinary sensitivity and unmistakable artistry."
-            </blockquote>
-            <cite>— The Classical Review</cite>
-          </div>
-          <div class="testimonial-slide">
-            <blockquote>
-              "A pianist of rare depth. His Beethoven sonatas spoke with the authority of
-              a seasoned master and the freshness of genuine discovery."
-            </blockquote>
-            <cite>— International Piano Magazine</cite>
-          </div>
-          <div class="testimonial-slide">
-            <blockquote>
-              "Technically flawless and emotionally captivating — the audience was
-              spellbound from the first note to the last."
-            </blockquote>
-            <cite>— Vienna Concert Hall Programme</cite>
-          </div>
-          <div class="testimonial-slide">
-            <blockquote>
-              "Shlomo Schnall possesses that rare gift — the ability to make the piano
-              sing with a voice entirely his own."
-            </blockquote>
-            <cite>— Carnegie Hall Review</cite>
-          </div>
-        </div>
-        <div class="testimonial-controls">
-          <button class="tc-btn" id="tcPrev" aria-label="Previous">&#8592;</button>
-          <div class="tc-dots" id="tcDots"></div>
-          <button class="tc-btn" id="tcNext" aria-label="Next">&#8594;</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ══════════════════════════════ CONTACT ════════════════════════════ -->
   <section id="contact" class="section section-alt reveal">
     <div class="section-inner contact-inner">
@@ -254,9 +203,7 @@
         <p>Whether you're looking for a solo recital, orchestral collaboration, or private event,
           Shlomo would love to hear from you.</p>
         <div class="contact-socials">
-          <a href="#" class="social-link" aria-label="YouTube">▶ YouTube</a>
-          <a href="#" class="social-link" aria-label="Facebook">f Facebook</a>
-          <a href="#" class="social-link" aria-label="Instagram">✦ Instagram</a>
+          <a href="https://www.youtube.com/results?search_query=Shlomo+Schnall" class="social-link" aria-label="Search YouTube for Shlomo Schnall" target="_blank" rel="noopener noreferrer">▶ YouTube</a>
         </div>
       </div>
       <div class="contact-details reveal-right"
