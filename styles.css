@@ -303,6 +303,21 @@ a:hover { color: var(--accent-hover); }
 .rep-card p { color: var(--text-muted); font-size: 0.95rem; }
 
 /* Videos Grid */
+.lessons-intro { max-width: 720px; margin: 0 auto 2rem; text-align: center; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; }
+.lessons-welcome { max-width: 900px; margin: 0 auto 2rem; padding: 1.75rem 2rem; border-left: 3px solid var(--accent); background: var(--bg-secondary); border-radius: 4px; }
+.lessons-welcome h3, .lessons-contact h3 { font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: .75rem; }
+.lessons-welcome p, .lessons-contact p { color: var(--text-muted); line-height: 1.8; }
+.lessons-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.lesson-card { padding: 2rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); }
+.lesson-kicker { display: block; color: var(--accent); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .8rem; }
+.lesson-card h3 { font-family: var(--font-heading); font-size: 1.5rem; line-height: 1.4; margin-bottom: 1rem; }
+.lesson-card p { color: var(--text-muted); line-height: 1.8; }
+.lesson-card .lesson-audience { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-color); font-size: .9rem; color: var(--text-primary); }
+.lesson-card-wide { grid-column: 1 / -1; }
+.lessons-contact { max-width: 720px; margin: 2.5rem auto 0; text-align: center; }
+.lessons-contact .btn { margin-top: 1.5rem; }
+@media (max-width: 640px) { .lessons-grid { grid-template-columns: 1fr; } .lesson-card, .lessons-welcome { padding: 1.5rem; } }
+
 .videos-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 2rem;
 }
