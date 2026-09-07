@@ -1,2 +1,3 @@
-# shlomo-portfolio-website
-Shlomo Schnall portfolio website
+# Shlomo Schnall Portfolio
+
+Live website: https://mordes89.github.io/Shlomo-Schnall-portfolio/
