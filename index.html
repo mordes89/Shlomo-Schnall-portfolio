@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&family=Gveret+Levin&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260907-hebrew-cursive" />
+  <link rel="stylesheet" href="styles.css?v=20260907-photos-paused" />
 </head>
 
 <body>
@@ -32,7 +32,7 @@
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#performances" class="nav-link">Performances</a></li>
+      <!-- Restore with the gallery: <li><a href="#performances" class="nav-link">Performances</a></li> -->
       <li><a href="#videos" class="nav-link">Videos</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
@@ -80,7 +80,9 @@
   <!-- ══════════════════════════════ ABOUT ══════════════════════════════ -->
   <section id="about" class="section reveal">
     <div class="section-inner">
-      <div class="about-grid">
+      <div class="about-grid about-grid-no-photo">
+        <!-- Portrait paused. Keep frame, signature and positioning settings for a future photo.
+             To restore, uncomment this block and remove about-grid-no-photo above.
         <div class="about-portrait reveal-left">
           <div class="portrait-frame">
             <img src="images/about.png" alt="Portrait of Shlomo Schnall" />
@@ -88,6 +90,7 @@
           </div>
           <div class="about-signature">Shlomo Schnall</div>
         </div>
+        -->
         <div class="about-text reveal-right">
           <p class="section-eyebrow">About the Pianist</p>
           <h2 class="section-heading">A Voice Through the Keys</h2>
@@ -162,6 +165,7 @@
   </section>
 
   <!-- ═════════════════════════ PERFORMANCES ════════════════════════════ -->
+  <!-- Gallery paused. Original images remain in images/ for future use.
   <section id="performances" class="section section-alt reveal">
     <div class="section-inner">
       <p class="section-eyebrow text-center">Gallery</p>
@@ -179,6 +183,7 @@
     </div>
   </section>
 
+  -->
   <!-- ══════════════════════════ YOUTUBE VIDEOS ═════════════════════════ -->
   <section id="videos" class="section section-alt">
     <div class="section-inner">
@@ -232,9 +237,11 @@
       <button class="info-close" id="infoClose" aria-label="Close">✕</button>
     </div>
     <div class="info-panel-body">
+      <!-- Photo paused; restore when a new portrait is available.
       <div class="info-photo">
         <img src="images/about.png" alt="Shlomo Schnall" />
       </div>
+      -->
       <ul class="info-list">
         <li><span class="info-icon">🌍</span><strong>Based:</strong> Jerusalem, Israel</li>
         <li><span class="info-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span><a
