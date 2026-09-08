@@ -1,6 +1,25 @@
 // Original video titles and descriptions intentionally remain in English.
 document.addEventListener('DOMContentLoaded', () => {
   const translations = {
+  "At the Piano": "ליד הפסנתר",
+  "Photo gallery": "גלריית תמונות",
+  "Previous photo": "התמונה הקודמת",
+  "Next photo": "התמונה הבאה",
+  "Choose a photo": "בחירת תמונה",
+  "Shlomo Schnall beside the piano": "שלמה שנאל לצד הפסנתר",
+  "Photo 1": "תמונה 1",
+  "Photo 2": "תמונה 2",
+  "Photo 3": "תמונה 3",
+  "Photo 4": "תמונה 4",
+  "Photo 5": "תמונה 5",
+  "Photo 6": "תמונה 6",
+  "Photo 7": "תמונה 7",
+  "Photo 8": "תמונה 8",
+  "Photo 9": "תמונה 9",
+  "Photo 10": "תמונה 10",
+  "Photo 11": "תמונה 11",
+  "Photo 12": "תמונה 12",
+
   "Shlomo Schnall": "שלמה שנאל",
   "Shlomo Schnall – Piano & Music Theory Teacher": "שלמה שנאל | מורה לפסנתר ולתורת המוזיקה",
   "Piano and music theory lessons with Shlomo Schnall for all ages and skill levels. Explore performances, custom music arrangements, and videos.": "שיעורי פסנתר ותורת המוזיקה עם שלמה שנאל לכל גיל ולכל רמה. הופעות, עיבודים מוזיקליים בהתאמה אישית וסרטונים.",

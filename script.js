@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
-    fetch('videos.json?v=20260907')
+    fetch('videos.json?v=20260907-schumann')
       .then(res => res.json())
       .then(data => {
         videosGrid.innerHTML = '';
