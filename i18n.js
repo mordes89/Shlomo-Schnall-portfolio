@@ -1,6 +1,8 @@
 // Original video titles and descriptions intentionally remain in English.
 document.addEventListener('DOMContentLoaded', () => {
   const translations = {
+  "Shlomo": "שלמה",
+  "Schnall": "שנאל",
   "Previous video": "הסרטון הקודם",
   "Next video": "הסרטון הבא",
   "At the Piano": "ליד הפסנתר",
