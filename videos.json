@@ -29,6 +29,20 @@
     "description": "A recorded recital featuring Mozart’s Sonata K. 330 (first movement), Chopin’s Nocturne Op. 55 No. 2 and Fantaisie in F minor, Debussy’s Reflets dans l’eau, Liszt’s Funérailles, and Rachmaninoff’s Prelude Op. 32 No. 12."
   },
   {
+    "url": "https://www.youtube.com/watch?v=Gl4XzB__oY4",
+    "title": "Schumann: Fantasiestücke Op. 12, No. 2, Aufschwung (Soaring)",
+    "category": "single",
+    "duration": "3:34",
+    "description": "Shlomo Schnall performs Aufschwung (Soaring), the second piece in Robert Schumann’s Fantasiestücke, Op. 12, in a recording shared on his YouTube channel."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ijUzUFZ-5nQ",
+    "title": "Chopin: Barcarolle, Op. 60",
+    "category": "single",
+    "duration": "9:35",
+    "description": "Shlomo performs Chopin’s Barcarolle, Op. 60 at a GEMS concert, shared by Naftali Schindler."
+  },
+  {
     "url": "https://www.youtube.com/watch?v=b-wnUP_c99U",
     "title": "Pirates of the Mediterranean",
     "category": "single",
@@ -57,24 +71,10 @@
     "description": "Shlomo brings a jazz interpretation to the Jewish classic Torat Hashem in this short piano performance."
   },
   {
-    "url": "https://www.youtube.com/watch?v=ijUzUFZ-5nQ",
-    "title": "Chopin: Barcarolle, Op. 60",
-    "category": "single",
-    "duration": "9:35",
-    "description": "Shlomo performs Chopin’s Barcarolle, Op. 60 at a GEMS concert, shared by Naftali Schindler."
-  },
-  {
     "url": "https://www.youtube.com/watch?v=SjGFq3izXY8",
     "title": "Rachem (Mercy) — Avraham Feintuch & Shlomo Schnall",
     "category": "single",
     "duration": "4:46",
     "description": "Cantor Avraham Feintuch sings Rachem, in the tradition of Cantor Rosenblatt, with Shlomo Schnall accompanying on piano."
-  },
-  {
-    "url": "https://www.youtube.com/watch?v=Gl4XzB__oY4",
-    "title": "Schumann: Fantasiestücke Op. 12, No. 2, Aufschwung (Soaring)",
-    "category": "single",
-    "duration": "3:34",
-    "description": "Shlomo Schnall performs Aufschwung (Soaring), the second piece in Robert Schumann’s Fantasiestücke, Op. 12, in a recording shared on his YouTube channel."
   }
 ]

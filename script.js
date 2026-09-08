@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
-    fetch('videos.json?v=20260907-schumann')
+    fetch('videos.json?v=20260907-video-order')
       .then(res => res.json())
       .then(data => {
         videosGrid.innerHTML = '';
@@ -155,18 +155,24 @@ document.addEventListener('DOMContentLoaded', () => {
             videos.forEach(video => {
               const videoId = new URL(video.url).searchParams.get('v');
               if (!/^[\w-]{11}$/.test(videoId || '')) return;
-              const card = document.createElement('article');
+              const card = document.createElement('a');
               card.className = 'video-card';
+              card.href = video.url;
+              card.target = '_blank';
+              card.rel = 'noopener noreferrer';
               const wrapper = document.createElement('div');
               wrapper.className = 'video-wrapper';
-              const iframe = document.createElement('iframe');
-              const start = Number.isInteger(video.start) && video.start > 0 ? `&start=${video.start}` : '';
-              iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0${start}`;
-              iframe.title = `${video.title} — Shlomo Schnall`;
-              iframe.loading = 'lazy';
-              iframe.allowFullscreen = true;
-              iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-              wrapper.appendChild(iframe);
+              const thumbnail = document.createElement('img');
+              thumbnail.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+              thumbnail.alt = '';
+              thumbnail.loading = 'lazy';
+              thumbnail.width = 480;
+              thumbnail.height = 360;
+              const play = document.createElement('span');
+              play.className = 'video-play';
+              play.setAttribute('aria-hidden', 'true');
+              play.textContent = '▶';
+              wrapper.append(thumbnail, play);
               const details = document.createElement('div');
               details.className = 'video-details';
               const title = document.createElement('h4');
@@ -178,11 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
               const description = document.createElement('p');
               description.className = 'video-description';
               description.textContent = video.description;
-              const link = document.createElement('a');
+              const link = document.createElement('span');
               link.className = 'video-source';
-              link.href = video.url;
-              link.target = '_blank';
-              link.rel = 'noopener noreferrer';
               link.textContent = 'Watch on YouTube ↗';
               details.append(title, duration, description, link);
               card.append(wrapper, details);
@@ -190,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             section.append(heading, intro, grid);
             videosGrid.appendChild(section);
+            setupVideoCarousel(section, grid);
           });
         } else {
           videosGrid.innerHTML = '<p class="videos-note">Check back later for new performance videos.</p>';
