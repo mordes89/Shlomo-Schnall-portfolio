@@ -22,13 +22,6 @@
     "description": "A recorded recital featuring Mozart’s Sonata K. 330 (first movement), Chopin’s Nocturne Op. 55 No. 2 and Fantaisie in F minor, Debussy’s Reflets dans l’eau, Liszt’s Funérailles, and Rachmaninoff’s Prelude Op. 32 No. 12."
   },
   {
-    "url": "https://www.youtube.com/watch?v=Gl4XzB__oY4",
-    "title": "Schumann: Fantasiestücke Op. 12, No. 2, Aufschwung (Soaring)",
-    "category": "single",
-    "duration": "3:34",
-    "description": "Shlomo Schnall performs Aufschwung (Soaring), the second piece in Robert Schumann’s Fantasiestücke, Op. 12, in a recording shared on his YouTube channel."
-  },
-  {
     "url": "https://www.youtube.com/watch?v=ijUzUFZ-5nQ",
     "title": "Chopin: Barcarolle, Op. 60",
     "category": "single",
@@ -50,13 +43,6 @@
     "description": "A live performance of Chopin’s Valse Brillante by Shlomo Schnall, shared by Mike Schnall."
   },
   {
-    "url": "https://www.youtube.com/watch?v=EEled2T-ZBo",
-    "title": "Two Flights Down",
-    "category": "single",
-    "duration": "2:37",
-    "description": "Shlomo Schnall performs Two Flights Down live, in a recording shared by Mike Schnall."
-  },
-  {
     "url": "https://www.youtube.com/watch?v=pfsVDmC6RCs",
     "title": "Jewish Jazz — Torat Hashem",
     "category": "single",
@@ -69,5 +55,12 @@
     "category": "single",
     "duration": "4:46",
     "description": "Cantor Avraham Feintuch sings Rachem, in the tradition of Cantor Rosenblatt, with Shlomo Schnall accompanying on piano."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=EEled2T-ZBo",
+    "title": "Two Flights Down",
+    "category": "single",
+    "duration": "2:37",
+    "description": "Shlomo Schnall performs Two Flights Down live, in a recording shared by Mike Schnall."
   }
 ]
