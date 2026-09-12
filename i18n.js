@@ -1,6 +1,9 @@
 // Original video titles and descriptions intentionally remain in English.
 document.addEventListener('DOMContentLoaded', () => {
   const translations = {
+  "Enjoy Shlomo’s music?": "נהנים מהמוזיקה של שלמה?",
+  "Support the artist. Buy Shlomo a coffee on PayBox.": "תמכו באמן. הזמינו את שלמה לקפה באמצעות PayBox.",
+  "PayBox phone number": "מספר הטלפון לתמיכה ב־PayBox",
   "Shlomo": "שלמה",
   "Schnall": "שנאל",
   "Previous video": "הסרטון הקודם",

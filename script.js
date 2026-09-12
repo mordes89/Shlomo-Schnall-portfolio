@@ -16,32 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.style.background = 'var(--overlay-bg)';
     } else {
       navbar.style.boxShadow = 'none';
-      navbar.style.background = 'transparent';
+      navbar.style.background = 'var(--overlay-bg)';
     }
   });
-
-  // Theme Switcher
-  const themeBtns = document.querySelectorAll('.theme-btn');
-  const html = document.documentElement;
-  // Load saved theme
-  const savedTheme = localStorage.getItem('shlomo_theme');
-  if (savedTheme) {
-    html.setAttribute('data-theme', savedTheme);
-    themeBtns.forEach(b => b.classList.remove('active'));
-    const activeBtn = document.querySelector(`.theme-btn[data-theme="${savedTheme}"]`);
-    if (activeBtn) activeBtn.classList.add('active');
-  }
-
-  themeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const theme = btn.getAttribute('data-theme');
-      html.setAttribute('data-theme', theme);
-      localStorage.setItem('shlomo_theme', theme);
-      themeBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
-
 
   // Floating Notes
   const floatingNotes = document.getElementById('floatingNotes');
@@ -129,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
-    fetch('videos.json?v=20260907-video-order')
+    fetch('videos.json?v=20260912-adon')
       .then(res => res.json())
       .then(data => {
         videosGrid.innerHTML = '';
@@ -156,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
               const videoId = new URL(video.url).searchParams.get('v');
               if (!/^[\w-]{11}$/.test(videoId || '')) return;
               const card = document.createElement('a');
-              card.className = 'video-card';
+              card.className = video.format === 'short' ? 'video-card video-short' : 'video-card';
               card.href = video.url;
               card.target = '_blank';
               card.rel = 'noopener noreferrer';

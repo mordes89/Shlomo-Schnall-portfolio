@@ -37,7 +37,8 @@ function setupVideoCarousel(section, track) {
   const modulo = n => (n % count + count) % count;
   const edge = el => {
     const rect = el.getBoundingClientRect();
-    return rtl() ? rect.right : rect.left;
+    const inset = el === track ? parseFloat(getComputedStyle(track).paddingInlineStart) || 0 : 0;
+    return rtl() ? rect.right - inset : rect.left + inset;
   };
   function nearest() {
     let index = current, distance = Infinity;

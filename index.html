@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="midnight">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
+  <script src="theme.js?v=20260912"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link id="pianoFavicon" rel="icon" type="image/svg+xml" href="favicon.svg?v=20260907" />
   <script defer src="favicon.js?v=20260907"></script>
@@ -14,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&family=Gveret+Levin&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260907-signature" />
+  <link rel="stylesheet" href="styles.css?v=20260912-release" />
 </head>
 
 <body>
@@ -42,17 +43,8 @@
     <button type="button" id="languageToggle" class="language-toggle" lang="he" aria-label="Switch to Hebrew">עברית</button>
 
     <!-- Theme Switcher -->
-    <div class="theme-switcher" id="themeSwitcher" aria-label="Choose color theme">
-      <button class="theme-btn active" data-theme="midnight" title="Midnight"
-        style="background:linear-gradient(135deg,#0a0a1a,#1e3a5f)"></button>
-      <button class="theme-btn" data-theme="ivory" title="Classic Ivory"
-        style="background:linear-gradient(135deg,#f5f0e8,#c9a84c)"></button>
-      <button class="theme-btn" data-theme="jazz" title="Jazz Amber"
-        style="background:linear-gradient(135deg,#1a0d00,#c07a2a)"></button>
-      <button class="theme-btn" data-theme="crimson" title="Crimson"
-        style="background:linear-gradient(135deg,#1a0008,#8b1a2e)"></button>
-      <button class="theme-btn" data-theme="emerald" title="Emerald"
-        style="background:linear-gradient(135deg,#001a0d,#1a6b3c)"></button>
+    <div class="theme-switcher" id="themeSwitcher">
+      <button id="themeToggle" type="button" aria-label="Switch to light mode"><span aria-hidden="true">☾</span> <span>Dark</span></button>
     </div>
   </nav>
 
@@ -204,6 +196,9 @@
             <img src="images/gallery/shlomo-11.jpeg" alt="Shlomo Schnall at the piano" loading="lazy" decoding="async" />
           </figure>
           <figure class="photo-slide" style="--photo-ratio: 0.750000">
+            <img src="images/gallery/shlomo-thumbnail.jpeg" alt="Shlomo Schnall at the piano" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="photo-slide" style="--photo-ratio: 0.750000">
             <img src="images/gallery/shlomo-12.jpeg" alt="Shlomo Schnall at the piano" loading="lazy" decoding="async" />
           </figure>
           <figure class="photo-slide" style="--photo-ratio: 0.703125">
@@ -212,7 +207,7 @@
         </div>
         <div class="photo-controls">
           <button class="photo-arrow photo-prev" type="button" aria-label="Previous photo">&#8592;</button>
-          <span class="photo-position" aria-live="polite" aria-atomic="true" dir="ltr">1 / 12</span>
+          <span class="photo-position" aria-live="polite" aria-atomic="true" dir="ltr">1 / 13</span>
           <button class="photo-arrow photo-next" type="button" aria-label="Next photo">&#8594;</button>
         </div>
 </div>
@@ -254,6 +249,14 @@
     </div>
   </section>
 
+  <section id="support" class="section" aria-labelledby="supportHeading">
+    <div class="section-inner support-inner">
+      <h2 id="supportHeading" class="section-heading">Enjoy Shlomo’s music?</h2>
+      <p>Support the artist. Buy Shlomo a coffee on PayBox.</p>
+      <p class="support-phone"><span>PayBox phone number</span><br><bdi dir="ltr">054-520-4894</bdi></p>
+    </div>
+  </section>
+
   <!-- ════════════════════════════ FOOTER ═══════════════════════════════ -->
 <section id="share" class="section" style="text-align:center"><div class="section-inner"><p class="section-eyebrow">QR code to Shlomo’s portfolio website</p><h2 class="section-heading">Share Shlomo’s portfolio</h2><p>Scan to open this website, or save the QR code to share with others.</p><a href="images/Shlomo-Schnall-Portfolio-QR.png" download="Shlomo-Schnall-Portfolio-QR.png" aria-label="Save Shlomo Schnall portfolio QR"><img src="images/Shlomo-Schnall-Portfolio-QR.png" width="320" height="320" style="display:block;width:min(320px,100%);height:auto;margin:28px auto;border-radius:8px" alt="QR code to Shlomo Schnall’s portfolio" loading="lazy"></a><button type="button" id="shareWebsite" class="btn btn-primary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:middle;margin-right:8px"><path d="m8.6 10.5 6.8-4m-6.8 7 6.8 4"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="5" r="3"/><circle cx="18" cy="19" r="3"/></svg>Share this website</button><p id="shareStatus" role="status" style="margin-top:12px"></p><input id="shareUrl" aria-label="Website link to copy" readonly hidden style="width:min(100%,480px);padding:12px;margin-top:12px" /></div></section>
   <footer id="footer">
@@ -292,10 +295,10 @@
     <img id="lightboxImg" src="" alt="" />
   </div>
 
-  <script src="i18n.js?v=20260907-signature"></script>
+  <script src="i18n.js?v=20260912-support"></script>
   <script src="gallery.js?v=20260907-loop"></script>
-  <script src="video-carousel.js?v=20260907-video-loop"></script>
-  <script src="script.js?v=20260907-video-order"></script>
+  <script src="video-carousel.js?v=20260912-release-video-loop"></script>
+  <script src="script.js?v=20260912-adon"></script>
   <!-- Cloudflare Web Analytics -->
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"66f735210ba44cdfb91a5fa03ec5c020"}'></script>
 </body>
