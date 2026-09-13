@@ -31,7 +31,7 @@ function setupVideoCarousel(section, track) {
   });
   controls.append(previous, counter, next);
   section.append(controls);
-  let current = count, drag = null, suppressClick = false, settleTimer;
+  let current = count, drag = null, suppressClick = false, settleTimer, initialized = false;
   const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   const rtl = () => document.documentElement.dir === 'rtl';
   const modulo = n => (n % count + count) % count;
@@ -49,11 +49,13 @@ function setupVideoCarousel(section, track) {
     return index;
   }
   function update() {
+    if (!initialized) return;
     current = nearest();
     const text = `${modulo(current) + 1} / ${count}`;
     if (counter.textContent !== text) counter.textContent = text;
   }
   function rebase() {
+    if (!initialized) return;
     const index = nearest();
     const equivalent = count + modulo(index);
     if (index !== equivalent) {
@@ -65,6 +67,12 @@ function setupVideoCarousel(section, track) {
       track.classList.remove('is-rebasing');
     }
     update();
+    // Native snapping can select a cloned neighbour after a loop rebase.
+    // Align once scrolling settles instead, including touch scrolling.
+    if (!drag) {
+      const correction = edge(cards[current]) - edge(track);
+      if (Math.abs(correction) > 1) track.scrollBy({left: correction, behavior: 'instant'});
+    }
   }
   function show(index, instant = false) {
     current = Math.max(0, Math.min(cards.length - 1, index));
@@ -123,7 +131,18 @@ function setupVideoCarousel(section, track) {
     if (suppressClick) { event.preventDefault(); suppressClick = false; }
   }, true);
   track.addEventListener('dragstart', event => event.preventDefault());
-  new ResizeObserver(() => show(count + modulo(current), true)).observe(track);
+  new ResizeObserver(() => { if (initialized) show(count + modulo(current), true); }).observe(track);
   new MutationObserver(() => show(count + modulo(current), true)).observe(document.documentElement, {attributes: true, attributeFilter: ['dir']});
-  show(count, true);
+  // Let the browser finish inserting/cloning cards and resolving scroll snap
+  // before calculating the first position. Ignore transient startup scrolls.
+  counter.textContent = `1 / ${count}`;
+  requestAnimationFrame(() => {
+    track.classList.add('is-rebasing');
+    track.scrollBy({left: edge(cards[count]) - edge(track), behavior: 'instant'});
+    requestAnimationFrame(() => {
+      track.classList.remove('is-rebasing');
+      initialized = true;
+      show(count, true);
+    });
+  });
 }

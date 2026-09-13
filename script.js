@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
-    fetch('videos.json?v=20260912-adon')
+    fetch('videos.json?v=20260913-schumann')
       .then(res => res.json())
       .then(data => {
         videosGrid.innerHTML = '';
