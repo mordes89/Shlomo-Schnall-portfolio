@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
-    fetch('videos.json?v=20260913-schumann')
+    fetch('videos.json?v=20261120-mozart-k330')
       .then(res => res.json())
       .then(data => {
         videosGrid.innerHTML = '';
@@ -155,16 +155,20 @@ document.addEventListener('DOMContentLoaded', () => {
               const title = document.createElement('h4');
               title.className = 'video-title';
               title.textContent = video.title;
-              const duration = document.createElement('p');
-              duration.className = 'video-duration';
-              duration.textContent = `Duration: ${video.duration}`;
+              details.append(title);
+              if (video.duration) {
+                const duration = document.createElement('p');
+                duration.className = 'video-duration';
+                duration.textContent = `Duration: ${video.duration}`;
+                details.append(duration);
+              }
               const description = document.createElement('p');
               description.className = 'video-description';
               description.textContent = video.description;
               const link = document.createElement('span');
               link.className = 'video-source';
               link.textContent = 'Watch on YouTube ↗';
-              details.append(title, duration, description, link);
+              details.append(description, link);
               card.append(wrapper, details);
               grid.appendChild(card);
             });
