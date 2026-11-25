@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Videos
   const videosGrid = document.getElementById('videosGrid');
   if (videosGrid) {
-    fetch('videos.json?v=20261120-mozart-k330')
+    fetch('videos.json?v=20261125-bach-italian-concerto')
       .then(res => res.json())
       .then(data => {
         videosGrid.innerHTML = '';
